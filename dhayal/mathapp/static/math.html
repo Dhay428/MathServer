@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>Power Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(69, 69, 69, 1);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(76, 255, 135);
+        }
+
+        form {
+            background-color: rgb(7, 3, 65);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px grey;
+            display: inline-block;
+            margin: auto;
+        }
+
+        label {
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+
+        input[type="number"] {
+            padding: 5px;
+            margin: 10px 0;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: rgb(108, 108, 233);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(11, 11, 196);
+        }
+    </style>
+</head>
+<body>
+    <h1>Power Calculator</h1>
+    <form method="POST">
+        <label for="I">Enter Current (I in Amps):</label>
+        <input type="number" name="intensity" id="I" value="{{ I }}" required>
+        <br><br>
+        <label for="R">Enter Resistance (R in Ohms):</label>
+        <input type="number" name="resistance" id="R" value="{{ R }}" required>
+        <br><br>
+        <button type="submit">Calculate Power</button>
+        <br><br>
+        <label for="power">Calculated Power (Watts):</label>
+        <input type="number" name="power" id="power" value="{{ power }}" readonly>
+    </form>
+</body>
+</html>
